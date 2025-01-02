@@ -61,3 +61,13 @@ function showFormData(event) {
     alert(`Form Data:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nDate of Birth: ${dob}\nMessage: ${message}`);
     return false;
 }
+function filterPosts(category) {
+    const posts = document.querySelectorAll('.blog-post');
+    posts.forEach(post => {
+        if (category === 'all' || post.classList.contains(category)) {
+            post.style.display = 'block';
+        } else {
+            post.style.display = 'none';
+        }
+    });
+}

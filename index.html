@@ -8,7 +8,7 @@
     <meta name="author" content="Saurab Neupane">
     <meta name="description" content="Empowering the youth of Nepal through education, innovation, and community engagement.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
@@ -23,8 +23,11 @@
 </head>
 
 <body>
+    
     <img src="images/youth800.jpg" alt="Youth Empowerment Logo" style="display: block; margin: 20px auto; max-width: 10%; height: auto;">
+    
     <h1>Youth Empowerment in Nepal</h1>
+    <header>
     <nav>
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -36,6 +39,25 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+</header>
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/gallery1.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery2.jpg" alt="Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery3.jpg" alt="Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery4.jpg" alt="Image 4">
+            </div>
+        </div>
+    </section>
+    <main>
     <section id="mission">
     <h2>Mission</h2>
 
@@ -66,13 +88,18 @@
 </section>
 <section id="blog">
     <h2>Latest Blog Posts</h2>
+    <div class="blog-categories">
+        <button class="category-button" onclick="filterPosts('all')">All</button>
+        <button class="category-button" onclick="filterPosts('education')">Education</button>
+        <button class="category-button" onclick="filterPosts('leadership')">Leadership</button>
+    </div>
     <div class="blog-container">
-        <article class="blog-post">
+        <article class="blog-post education">
             <h3>Empowering Youth Through Education</h3>
             <p>Education is a powerful tool that enables young people to achieve their potential...</p>
             <a href="posts/post1.html" class="read-more">Read More</a>
         </article>
-        <article class="blog-post">
+        <article class="blog-post leadership">
             <h3>Leadership Development in Nepal</h3>
             <p>Leadership skills are essential for driving change and inspiring communities...</p>
             <a href="posts/post2.html" class="read-more">Read More</a>
@@ -80,6 +107,11 @@
     </div>
 </section>
 
+<aside>
+    <h2>Did You Know?</h2>
+    <p>Empowering youth can significantly impact the future of a nation.</p>
+</aside>
+</main>
 
     <section id="contact">
         <h2>Contact Us</h2>
@@ -102,10 +134,24 @@
         
             <button type="submit" class="custom-button">Submit</button>
         </form>
-        
-
-        
-    </section>
+        <section id="testimonials">
+            <h2>What People Are Saying</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p>"Youth Empowerment in Nepal has transformed my perspective on leadership. Truly inspiring!"</p>
+                    <h3>- Aakriti Sharma</h3>
+                </div>
+                <div class="testimonial">
+                    <p>"Their focus on education and community engagement is making a real difference in Nepal."</p>
+                    <h3>- Rajesh Gupta</h3>
+                </div>
+                <div class="testimonial">
+                    <p>"An exceptional initiative that's empowering youth to create a brighter future."</p>
+                    <h3>- Priya Adhikari</h3>
+                </div>
+            </div>
+        </section>
+    
     <p>
         Visit our <a href="https://example.com" target="_blank">official page</a> to learn more about our mission.
     </p>

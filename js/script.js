@@ -71,3 +71,52 @@ function filterPosts(category) {
         }
     });
 }
+function validateForm() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "") {
+        alert("Name is required.");
+        return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    if (message === "") {
+        alert("Message cannot be empty.");
+        return false;
+    }
+
+    alert("Form submitted securely!");
+    return true;
+}
+async function fetchWeather() {
+    const apiKey = "fd71f6ad8c7ea7b1b706722900745f76"; // Replace with your OpenWeatherMap API key
+    const city = "Kathmandu";
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.cod === 200) {
+            const weatherInfo = `
+                <strong>${data.name}, ${data.sys.country}:</strong>
+                ${data.weather[0].description}, ${data.main.temp}°C
+            `;
+            document.getElementById("weather-info").innerHTML = weatherInfo;
+        } else {
+            document.getElementById("weather-info").innerHTML = "Error fetching weather data.";
+        }
+    } catch (error) {
+        document.getElementById("weather-info").innerHTML = "Unable to load weather data.";
+    }
+}
+
+// Call the function to fetch weather data
+fetchWeather();

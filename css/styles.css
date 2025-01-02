@@ -1,6 +1,6 @@
 :root {
     /* Color Scheme */
-    --primary-color: #71257b;
+    --primary-color: #cc8ad4;
     --secondary-color: #003f8a;
     --background-color: #f4f4f9;
     --text-color: #333;
@@ -769,4 +769,87 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--secondary-color);
+}
+.share-buttons {
+    margin-top: 10px;
+}
+
+.share-buttons a {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #0056b3;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+.share-buttons a:hover {
+    color: #003f8a;
+}
+
+.share-buttons i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+.custom-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a {
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+.blog-post {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.blog-post:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2, h3 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+#weather {
+    padding: 40px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.weather-container {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
 }
